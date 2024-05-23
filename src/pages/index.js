@@ -5,7 +5,7 @@ export default function Home() {
 	return (
 		<div>
 			<main>
-				<div className="text-gray-100 bg-black min-h-[100dvh] overflow-hidden">
+				<div className="text-gray-100 hero-stars min-h-[100dvh] overflow-hidden">
 					<Hero />
 				</div>
 			</main>
