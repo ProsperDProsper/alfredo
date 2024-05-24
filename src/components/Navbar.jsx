@@ -3,35 +3,48 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { navigationLinks } from "@/constants/constants";
+import Image from "next/image";
 
 const NavBar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleMenu = () => {
-		setIsOpen(!isOpen);
+		// setIsOpen(!isOpen);
 	};
 
 	return (
 		<header className="sticky z-50 top-0">
 			<nav className="">
 				<div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-					<div className="italic ">
+					<div className=" ">
 						<Link
 							href="/"
-							className="skew-y-[45deg]  text-primary font-playfair  translate-x-[30deg]"
+							className="  fill-primary font-playfair  translate-x-[30deg]"
 						>
-							Alfredo
+							<Image
+								src={"/logo.svg"}
+								width={100}
+								height={100}
+								alt="alfredo's logo"
+							/>
 						</Link>
 					</div>
 					<div className="hidden md:flex space-x-6">
 						{navigationLinks.map((link) => (
-							<Link key={link.name} href={link.href} className="">
+							<Link
+								key={link.name}
+								href={link.href}
+								className="hover:text-primary transition-all"
+							>
 								{link.name}
 							</Link>
 						))}
 					</div>
 					<div className="hidden md:block">
-						<Link href="/contact" className=" py-2 px-4 ">
+						<Link
+							href="/contact"
+							className="hover:text-primary transition-all py-2 px-4 "
+						>
 							Contact Us
 						</Link>
 					</div>
@@ -45,13 +58,17 @@ const NavBar = () => {
 					<div className="md:hidden bg-white shadow-md">
 						<div className="px-4 py-2 space-y-2">
 							{navigationLinks.map((link) => (
-								<Link key={link.name} href={link.href} className="block ">
+								<Link
+									key={link.name}
+									href={link.href}
+									className="block  hover:text-primary transition-all"
+								>
 									{link.name}
 								</Link>
 							))}
 							<Link
 								href="/contact"
-								className="block  py-2 px-4 rounded-md text-center"
+								className="block  py-2 px-4 rounded-md text-center hover:text-primary transition-all"
 							>
 								Contact Us
 							</Link>
