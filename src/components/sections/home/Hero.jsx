@@ -3,14 +3,29 @@ import React from "react";
 import Image from "next/image";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { Button } from "@/components/ui/MovingBorder";
+import TypingText from "@/components/TypingTexts";
+import { motion } from "framer-motion";
+import {
+	slideIn,
+	textVariant,
+	textVariant2,
+	textVariant3,
+} from "@/utils/motion";
 
 const HeroDescription = () => {
 	return (
 		<div className="  pt-16 lg:pt-24 lg:px-24 xl:pt-32 xl:px-48 sm:px-8 text-center sm:text-left  flex flex-col justify-center items-center ">
 			<div className=" px-4 max-w-[400px]">
-				<h1 className={`text-6xl  font- uppercase tracking-widest `}>
+				<motion.h1
+					variants={textVariant2}
+					className={`text-6xl  font- uppercase tracking-widest `}
+				>
 					<span className=" font-thin  "></span> Alfredo <br />{" "}
-					<span className="flex  gap-2 md:gap-8 items-center  text-5xl font-thin">
+					{/* <TypingText title={"Alfredo"} textStyles={""} /> */}
+					<motion.span
+						variants={textVariant2}
+						className="flex -z-10  gap-2 md:gap-8 items-center  text-5xl font-thin"
+					>
 						{" "}
 						<Image
 							src={"/suit.svg"}
@@ -19,14 +34,21 @@ const HeroDescription = () => {
 							alt="a suit svg"
 							className="w-12 sm:w-14  lg:w-16 ml-8  "
 						/>{" "}
+						{/* <TypingText title={"Store"} textStyles={"text-5xl font-thin"} /> */}
 						Store
-					</span>
-				</h1>
-				<p className="mt-6 text-[16px] my-4 font-light ">
+					</motion.span>
+				</motion.h1>
+				<motion.p
+					variants={textVariant2}
+					className="mt-6 text-[16px] my-4 font-light "
+				>
 					Discover the finest collection of premium Italian and Turkey suits for
 					men . All Perfected with a touch of Class and Elegance
-				</p>
-				<div className="hover:translate-x-4 transition-all">
+				</motion.p>
+				<motion.div
+					variants={textVariant2}
+					className="hover:translate-x-4 transition-all"
+				>
 					<Button
 						borderRadius="0rem"
 						className=" uppercase  px-4 py-6 bg-transparent border-[1px] border-primary text-primary   "
@@ -36,7 +58,7 @@ const HeroDescription = () => {
 							<span></span>{" "}
 						</div>
 					</Button>
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	);
