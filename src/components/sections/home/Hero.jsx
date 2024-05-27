@@ -1,36 +1,42 @@
 import Navbar from "@/components/Navbar";
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
+import { Spotlight } from "@/components/ui/Spotlight";
+import { Button } from "@/components/ui/MovingBorder";
 
 const HeroDescription = () => {
 	return (
 		<div className="  pt-16 lg:pt-24 lg:px-24 xl:pt-32 xl:px-48 sm:px-8 text-center sm:text-left  flex flex-col justify-center items-center ">
 			<div className=" px-4 max-w-[400px]">
-				<h1 className="text-6xl uppercase tracking-wider font-playfair font-thin  ">
-					<span className=" font-bold"></span> Alfredo <br />{" "}
-					<span className="flex  gap-2 md:gap-8 items-center">
+				<h1 className={`text-6xl  font- uppercase tracking-widest `}>
+					<span className=" font-thin  "></span> Alfredo <br />{" "}
+					<span className="flex  gap-2 md:gap-8 items-center  text-5xl font-thin">
 						{" "}
 						<Image
 							src={"/suit.svg"}
 							height={100}
 							width={100}
 							alt="a suit svg"
-							className="w-12 sm:w-14  lg:w-16 ml-8 "
+							className="w-12 sm:w-14  lg:w-16 ml-8  "
 						/>{" "}
 						Store
 					</span>
 				</h1>
-				<p className="mt-6 text-[16px] ">
+				<p className="mt-6 text-[16px] my-4 font-light ">
 					Discover the finest collection of premium Italian and Turkey suits for
 					men . All Perfected with a touch of Class and Elegance
 				</p>
-				<Link
-					href="/collection"
-					className="mt-10 hover:translate-x-2 transition-all tracking-wider  inline-block border-[0.4px] border-primary text-primary py-3 px-6 uppercase "
-				>
-					Explore Collection
-				</Link>
+				<div className="hover:translate-x-4 transition-all">
+					<Button
+						borderRadius="0rem"
+						className=" uppercase  px-4 py-6 bg-transparent border-[1px] border-primary text-primary   "
+					>
+						<div className="flex  justify-center items-center">
+							<span className="mr-2">explore collection</span>
+							<span></span>{" "}
+						</div>
+					</Button>
+				</div>
 			</div>
 		</div>
 	);
@@ -39,6 +45,7 @@ const HeroDescription = () => {
 const Hero = () => {
 	return (
 		<div className=" min-h-[100dvh] max-w-7xl mx-auto flex flex-col justify-between sm:block  pb-32 md:pb-4 ">
+			<Spotlight />
 			<Navbar />
 			<div className=" relative z-10 flex items-center">
 				<HeroDescription />

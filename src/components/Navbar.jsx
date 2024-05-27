@@ -13,7 +13,7 @@ const NavBar = () => {
 	};
 
 	return (
-		<header className="sticky z-50 top-0">
+		<header className="sticky z-50 top- uppercase">
 			<nav className="">
 				<div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
 					<div className=" ">
@@ -40,10 +40,10 @@ const NavBar = () => {
 							</Link>
 						))}
 					</div>
-					<div className="hidden md:block">
+					<div className="hidden md:block hover:-translate-x-2 transition-all ">
 						<Link
 							href="/contact"
-							className="hover:text-primary transition-all py-2 px-4 "
+							className="hover:text-primary border-[1px] border-primary transition-all -hover:translate-x-2  py-3 px-6 "
 						>
 							Contact Us
 						</Link>

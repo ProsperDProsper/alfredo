@@ -1,14 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 @font-face {
-  font-family: "quince";
-  src: url("/Quince.otf");
+  font-family: "evafiya";
+  src: url("/evafiya.ttf");
 }
-
+@font-face {
+  font-family: "metropolis";
+  src: url("/metropolis.ttf");
+}
+@font-face {
+  font-family: "bolin";
+  src: url("/bolin.ttf");
+}
+@font-face {
+  font-family: "cannia";
+  src: url("/cannia.otf");
+}
+@font-face {
+  font-family: "evafiya";
+  src: url("/evafiya.ttf");
+} */
 @layer utilities{
   .hero-background{
     background-image: url('/alfredo.png');
