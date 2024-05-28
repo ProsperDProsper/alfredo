@@ -26,13 +26,13 @@ const Products = () => {
 					suits to casual jeans, we have everything you need to look your best.
 				</p>
 			</motion.div>
-			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-3 gap-8 mt-8 min-h-[120dvh] lg:h-[150dvh] max-w-5xl mx-auto">
+			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-3 gap-8 mt-8 lg:h-[150dvh]  max-w-5xl mx-auto">
 				{products.map((product) => (
 					<motion.div
 						variants={textVariant2}
 						key={product.id}
 						className={twMerge(
-							"bg-white shadow-md min-h-48 overflow-hidden rounded-xl relative cursor-pointer ",
+							"bg-white shadow-md  overflow-hidden rounded-xl relative cursor-pointer ",
 							product.styles
 						)}
 					>
@@ -41,7 +41,7 @@ const Products = () => {
 							height={500}
 							src={product.image}
 							alt={product.name}
-							className="w-full  md:h-[100%] object-cover  hover:scale-[1.1] transition-all"
+							className="w-full h-56 md:h-60 lg:h-[100%] object-cover  hover:scale-[1.1] transition-all"
 						/>
 						<div className="absolute bottom-4  left-4   rounded-md flex bg-primary px-6 py-2 text-gray-100">
 							<h3 className=" uppercase text-[#ffe9c9]">{product.name}</h3>
