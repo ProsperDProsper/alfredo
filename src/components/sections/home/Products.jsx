@@ -26,7 +26,7 @@ const Products = () => {
 					suits to casual jeans, we have everything you need to look your best.
 				</p>
 			</motion.div>
-			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-3 gap-8 mt-8 h-[150dvh] max-w-5xl mx-auto">
+			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-3 gap-8 mt-8 min-h-[150dvh] max-w-5xl mx-auto">
 				{products.map((product) => (
 					<motion.div
 						variants={textVariant2}
