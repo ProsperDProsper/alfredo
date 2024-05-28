@@ -161,8 +161,8 @@ export const footerVariants = {
 		y: 50,
 		transition: {
 			type: "spring",
-			stiffness: 300,
-			damping: 140,
+			stiffness: 200,
+			damping: 800,
 		},
 	},
 	show: {
@@ -170,8 +170,8 @@ export const footerVariants = {
 		y: 0,
 		transition: {
 			type: "spring",
-			stiffness: 80,
-			delay: 0.25,
+			stiffness: 60,
+			delay: 0.15,
 		},
 	},
 };

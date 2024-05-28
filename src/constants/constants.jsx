@@ -18,7 +18,7 @@ export const products = [
 		id: 2,
 		name: "T-Shirts",
 		image: "/images/products/tshirts.jpg",
-		styles: " col-span-2",
+		styles: " lg:col-span-2",
 	},
 	{
 		id: 3,

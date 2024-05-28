@@ -4,9 +4,16 @@ import { twMerge } from "tailwind-merge";
 import { textContainer, textVariant2 } from "@/utils/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import FashionQuote from "./FashionQuote";
 const Products = () => {
 	return (
 		<div className="max-w-7xl mx-auto px-4 py-12">
+			<FashionQuote />
+			<ol className=" list-disc text-gray-400 flex justify-center items-center gap-4 tracking-widest text-sm uppercase ">
+				<li className="list-none mr-4 ">fashion</li>
+				<li className="mr-4">Elegance</li>
+				<li className="">luxury</li>
+			</ol>
 			<h2 className="text-4xl text-gray-600 font-bold text-center">
 				Explore Our <span className="text-[#febc5d]"> Products</span>
 			</h2>
@@ -25,7 +32,7 @@ const Products = () => {
 						variants={textVariant2}
 						key={product.id}
 						className={twMerge(
-							"bg-white shadow-md  overflow-hidden rounded-xl relative cursor-pointer ",
+							"bg-white shadow-md min-h-48 overflow-hidden rounded-xl relative cursor-pointer ",
 							product.styles
 						)}
 					>
@@ -34,7 +41,7 @@ const Products = () => {
 							height={500}
 							src={product.image}
 							alt={product.name}
-							className="w-full h-[100%] object-cover  hover:scale-[1.1] transition-all"
+							className="w-full  md:h-[100%] object-cover  hover:scale-[1.1] transition-all"
 						/>
 						<div className="absolute bottom-4  left-4   rounded-md flex bg-primary px-6 py-2 text-gray-100">
 							<h3 className=" uppercase text-[#ffe9c9]">{product.name}</h3>
